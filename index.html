@@ -13,9 +13,16 @@
 <body>
 
 <div class="layui-container">
-    <div class="layui-row layui-inline" style="text-align: center;">
-        <div class="layui-col-md6 layui-col-lg-offset3" style="background:#00FF00; color: #ffffff;">
-            Hello World.
+    <div class="layui-row layui-col-space5">
+        <div class="layui-col-md6 layui-col-md-offset3">
+            <div class="layui-row grid-demo grid-demo-bg1">
+                <div class="layui-col-md12" id="resist-">
+                    <i class="layui-icon-loading-1" style="font-size: 45px;"></i>
+                </div>
+                <div class="layui-col-md12" style="text-align:center;">
+                    <button onclick="">刷新</button>
+                </div>
+            </div>
         </div>
     </div>
 </div>
@@ -26,6 +33,10 @@
 
         layer.msg('Hello World', {time: 1000});
     });
+
+    function f() {
+
+    }
 </script>
 </body>
 </html>

@@ -16,11 +16,11 @@
     <div class="layui-row layui-col-space5">
         <div class="layui-col-md6 layui-col-md-offset3">
             <div class="layui-row grid-demo grid-demo-bg1">
-                <div class="layui-col-md12" id="resist-">
+                <div class="layui-col-md12" id="resist-xiaozhan">
                     <i class="layui-icon-loading-1" style="font-size: 45px;"></i>
                 </div>
                 <div class="layui-col-md12" style="text-align:center;">
-                    <button onclick="">刷新</button>
+                    <button onclick="resistXiaoZhan()">刷新</button>
                 </div>
             </div>
         </div>
@@ -34,8 +34,16 @@
         layer.msg('Hello World', {time: 1000});
     });
 
-    function f() {
-
+    function resistXiaoZhan() {
+        $.ajax({
+            url: "http://hope.37duyi.com/api/resist/resistXiaoZhan",
+            dataType: "JSON",
+            success: function (success) {
+                console.log(success);
+                layer.msg(success.message);
+                $("#resist-xiaozhan").html(success.data.resist);
+            }
+        });
     }
 </script>
 </body>

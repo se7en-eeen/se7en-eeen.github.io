@@ -11,12 +11,20 @@
     <script src="static/jquery.min.js" charset="utf-8"></script>
 </head>
 <body>
-<span>Hello World, XiaoZhan dead dead dead</span>
+
+<div class="layui-container">
+    <div class="layui-row layui-inline" style="text-align: center;">
+        <div class="layui-col-md6 layui-col-lg-offset3" style="background:#00FF00; color: #ffffff;">
+            Hello World.
+        </div>
+    </div>
+</div>
+
 <script>
-    layui.use(['layer'], function(){
+    layui.use(['layer'], function () {
         let layer = layui.layer;
 
-        layer.msg('Hello World');
+        layer.msg('Hello World', {time: 1000});
     });
 </script>
 </body>
